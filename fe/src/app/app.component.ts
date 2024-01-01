@@ -51,7 +51,7 @@ export class AppComponent {
       'lettuce',
       'onion',
       'cabbage',
-      'yellow pepper',
+      'pepper',
       'carrot',
       'tomato',
   ]
