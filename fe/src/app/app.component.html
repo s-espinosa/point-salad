@@ -1,0 +1,43 @@
+<h1 class="
+    bg-lime-100
+    p-4
+    text-4xl
+    font-extrabold
+    leading-none
+    tracking-tight
+    text-gray-900
+    md:text-5xl
+    lg:text-6xl
+  ">Point Salad
+</h1>
+
+<!-- DRAW PILES -->
+<div>
+</div>
+
+<!-- MARKET -->
+<div class="p-4 bg-lime-100">
+  <h2 class="text-4xl font-extrabold">Market</h2>
+  <!-- CARDS -->
+  <div class="grid grid-rows-2 grid-flow-col gap-4">
+    <div *ngFor="let veggie of veggies" (click)="selectVeggie(veggie)"
+      class="{{veggie.color}} rounded-md text-center w-24 p-2">
+      <img src="{{veggie.png}}" alt="">
+    </div>
+  </div>
+</div>
+
+<!-- TABLEAU -->
+<div class="p-4 bg-lime-100">
+  <h2 class="text-4xl font-extrabold">Collection</h2>
+  <!-- COUNTS -->
+  <div class="grid grid-rows-1 grid-flow-col gap-1">
+    <div *ngFor="let veggieName of veggieTypes" class="rounded-md bg-fuchsia-800 w-10 h-10 text-center p-2">
+      <span>
+        {{ countCollected(veggieName) }}
+      </span>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
