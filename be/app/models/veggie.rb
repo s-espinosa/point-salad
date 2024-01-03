@@ -1,0 +1,3 @@
+class Veggie < ApplicationRecord
+
+end

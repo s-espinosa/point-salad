@@ -1,0 +1,3 @@
+class ScoringCondition < ApplicationRecord
+
+end
