@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   # root "posts#index"
   get '/veggies/:id', to: 'veggies#show', as: 'veggie'
   resources :scoring_conditions, only: [:show]
+  resources :scoring_cards, only: [:show]
 end
