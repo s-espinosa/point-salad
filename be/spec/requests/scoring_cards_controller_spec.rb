@@ -3,9 +3,14 @@ require 'rails_helper'
 describe ScoringCardsController, type: :request do
   describe 'request a scoring card' do
     it 'returns a successful response' do
+      onion = Veggie.create(
+        name: 'onion',
+        color: 'pink-700',
+        png: '/assets/onion.png'
+      )
       scoring_condition = ScoringCondition.create(
         points: 2,
-        required_vegetable: 'onion',
+        required_veggies: [onion],
         scoring_method: 'pointsPer'
       )
       veggie = Veggie.create(

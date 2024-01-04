@@ -39,11 +39,11 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_04_001603) do
   end
 
   create_table "veggie_conditions", force: :cascade do |t|
-    t.bigint "card_condition_id", null: false
+    t.bigint "scoring_condition_id", null: false
     t.bigint "veggie_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["card_condition_id"], name: "index_veggie_conditions_on_card_condition_id"
+    t.index ["scoring_condition_id"], name: "index_veggie_conditions_on_scoring_condition_id"
     t.index ["veggie_id"], name: "index_veggie_conditions_on_veggie_id"
   end
 
@@ -57,7 +57,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_04_001603) do
 
   add_foreign_key "card_conditions", "scoring_cards"
   add_foreign_key "card_conditions", "scoring_conditions"
-  add_foreign_key "scoring_cards", "veggies", column: "veggie_id"
-  add_foreign_key "veggie_conditions", "card_conditions"
-  add_foreign_key "veggie_conditions", "veggies", column: "veggie_id"
+  add_foreign_key "scoring_cards", "veggies"
+  add_foreign_key "veggie_conditions", "scoring_conditions"
+  add_foreign_key "veggie_conditions", "veggies"
 end

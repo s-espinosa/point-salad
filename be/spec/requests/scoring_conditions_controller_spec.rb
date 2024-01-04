@@ -20,8 +20,6 @@ describe ScoringConditionsController, type: :request do
         scoring_method: 'set'
       )
 
-      debugger
-
       get scoring_condition_path(scoring_condition)
 
       expect(response).to be_successful
