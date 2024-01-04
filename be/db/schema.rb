@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_03_054205) do
+ActiveRecord::Schema[7.1].define(version: 2024_01_04_001603) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -33,10 +33,18 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_03_054205) do
 
   create_table "scoring_conditions", force: :cascade do |t|
     t.integer "points"
-    t.string "required_vegetable"
     t.string "scoring_method"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "veggie_conditions", force: :cascade do |t|
+    t.bigint "card_condition_id", null: false
+    t.bigint "veggie_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["card_condition_id"], name: "index_veggie_conditions_on_card_condition_id"
+    t.index ["veggie_id"], name: "index_veggie_conditions_on_veggie_id"
   end
 
   create_table "veggies", force: :cascade do |t|
@@ -50,4 +58,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_03_054205) do
   add_foreign_key "card_conditions", "scoring_cards"
   add_foreign_key "card_conditions", "scoring_conditions"
   add_foreign_key "scoring_cards", "veggies", column: "veggie_id"
+  add_foreign_key "veggie_conditions", "card_conditions"
+  add_foreign_key "veggie_conditions", "veggies", column: "veggie_id"
 end
