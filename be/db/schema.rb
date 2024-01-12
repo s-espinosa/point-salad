@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_04_001603) do
+ActiveRecord::Schema[7.1].define(version: 2024_01_03_054205) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -34,17 +34,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_04_001603) do
   create_table "scoring_conditions", force: :cascade do |t|
     t.integer "points"
     t.string "scoring_method"
+    t.jsonb "required_vegetables"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "vegetable_conditions", force: :cascade do |t|
-    t.bigint "scoring_condition_id", null: false
-    t.bigint "vegetable_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["scoring_condition_id"], name: "index_vegetable_conditions_on_scoring_condition_id"
-    t.index ["vegetable_id"], name: "index_vegetable_conditions_on_vegetable_id"
   end
 
   create_table "vegetables", force: :cascade do |t|
@@ -58,6 +50,4 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_04_001603) do
   add_foreign_key "card_conditions", "scoring_cards"
   add_foreign_key "card_conditions", "scoring_conditions"
   add_foreign_key "scoring_cards", "vegetables"
-  add_foreign_key "vegetable_conditions", "scoring_conditions"
-  add_foreign_key "vegetable_conditions", "vegetables"
 end

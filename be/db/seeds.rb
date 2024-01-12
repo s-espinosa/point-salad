@@ -30,29 +30,28 @@ tomato = Vegetable.find_or_create_by(name: 'tomato') do |vegetable|
 end
 
 vegetables = [
-  cabbage,
-  carrot,
-  lettuce,
-  onion,
-  pepper,
-  tomato
+  :cabbage,
+  :carrot,
+  :lettuce,
+  :onion,
+  :pepper,
+  :tomato
 ]
 
 #### CREATE SCORING CONDITIONS #####
 
-sc = ScoringCondition.includes(:required_vegetables)
+# sets = ScoringCondition.includes(:required_vegetables).where(scoring_method: 'set')
 
-ScoringCondition.create(points: -1, scoring_method: 'set', required_vegetables: [cabbage])
+# ScoringCondition.create(points: -1, scoring_method: 'set', required_vegetables: [cabbage])
 
-# negative_one_set_of_one = veggies.each do |veggie|
-#   ScoringCondition
-#     .joins(:required_veggies)
-#     .where(
-#       points: -1,
-#       scoring_method: 'set',
-#       required_veggies: [veggie]  
-#     ).first_or_create
-# end
+negative_one_set_of_one = vegetables.each do |vegetable|
+  ScoringCondition
+    .find_or_create_by(
+      points: -1,
+      scoring_method: 'set',
+      required_vegetables: [vegetable].to_json
+    )
+end
 
 # negative_two_set_of_one = veggies.each do |veggie|
 #   ScoringCondition.find_or_create_by(
