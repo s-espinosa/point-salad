@@ -1,6 +1,6 @@
 class VegetablesController < ApplicationController
   def show
-    @veggie = Vegetable.find(params[:id])
-    render json: @veggie
+    @vegetable = Vegetable.find(params[:id])
+    render json: @vegetable, serializer: VegetableSerializer
   end
 end
