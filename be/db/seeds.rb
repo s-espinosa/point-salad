@@ -1,35 +1,35 @@
 #### CREATE VEGGIES #####
-lettuce = Veggie.find_or_create_by(name: 'lettuce') do |veggie|
-  veggie.color = 'green-600'
-  veggie.png = '/assets/lettuce.png'
+lettuce = Vegetable.find_or_create_by(name: 'lettuce') do |vegetable|
+  vegetable.color = 'green-600'
+  vegetable.png = '/assets/lettuce.png'
 end
 
-onion = Veggie.find_or_create_by(name: 'onion') do |veggie|
-  veggie.color = 'pink-700'
-  veggie.png = '/assets/onion.png'
+onion = Vegetable.find_or_create_by(name: 'onion') do |vegetable|
+  vegetable.color = 'pink-700'
+  vegetable.png = '/assets/onion.png'
 end
 
-cabbage = Veggie.find_or_create_by(name: 'cabbage') do |veggie|
-  veggie.color = 'fuchsia-800'
-  veggie.png = '/assets/cabbage.png'
+cabbage = Vegetable.find_or_create_by(name: 'cabbage') do |vegetable|
+  vegetable.color = 'fuchsia-800'
+  vegetable.png = '/assets/cabbage.png'
 end
 
-pepper = Veggie.find_or_create_by(name: 'pepper') do |veggie|
-  veggie.color = 'yellow-400'
-  veggie.png = '/assets/pepper.png'
+pepper = Vegetable.find_or_create_by(name: 'pepper') do |vegetable|
+  vegetable.color = 'yellow-400'
+  vegetable.png = '/assets/pepper.png'
 end
 
-carrot = Veggie.find_or_create_by(name: 'carrot') do |veggie|
-  veggie.color = 'orange-500'
-  veggie.png = '/assets/carrot.png'
+carrot = Vegetable.find_or_create_by(name: 'carrot') do |vegetable|
+  vegetable.color = 'orange-500'
+  vegetable.png = '/assets/carrot.png'
 end
 
-tomato = Veggie.find_or_create_by(name: 'tomato') do |veggie|
-  veggie.color = 'red-700'
-  veggie.png = '/assets/tomato.png'
+tomato = Vegetable.find_or_create_by(name: 'tomato') do |vegetable|
+  vegetable.color = 'red-700'
+  vegetable.png = '/assets/tomato.png'
 end
 
-veggies = [
+vegetables = [
   cabbage,
   carrot,
   lettuce,
@@ -40,10 +40,9 @@ veggies = [
 
 #### CREATE SCORING CONDITIONS #####
 
-sc = ScoringCondition.includes(:required_veggies)
+sc = ScoringCondition.includes(:required_vegetables)
 
-negative_one_set_of_lettuce = sc.select { |condition| condition.}
-ScoringCondition.create(points: -1, scoring_method: 'set', required_veggies: [cabbage])
+ScoringCondition.create(points: -1, scoring_method: 'set', required_vegetables: [cabbage])
 
 # negative_one_set_of_one = veggies.each do |veggie|
 #   ScoringCondition
