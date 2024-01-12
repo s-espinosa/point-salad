@@ -1,3 +1,0 @@
-class Veggie < ApplicationRecord
-
-end

@@ -3,12 +3,12 @@ require 'rails_helper'
 describe ScoringConditionsController, type: :request do
   describe 'request a scoring condition' do
     it 'returns a successful response' do
-      cabbage = Veggie.create(
+      cabbage = Vegetable.create(
         name: 'cabbage',
         color: 'fuchsia-800',
         png: '/assets/cabbage.png'
       )
-      lettuce = Veggie.create(
+      lettuce = Vegetable.create(
         name: 'lettuce',
         color: 'green-600',
         png: '/assets/lettuce.png'
@@ -16,7 +16,7 @@ describe ScoringConditionsController, type: :request do
       
       scoring_condition = ScoringCondition.create(
         points: 5,
-        required_veggies: [cabbage, lettuce],
+        required_vegetables: [cabbage, lettuce],
         scoring_method: 'set'
       )
 

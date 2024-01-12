@@ -25,10 +25,10 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_04_001603) do
 
   create_table "scoring_cards", force: :cascade do |t|
     t.string "scoring_description"
-    t.bigint "veggie_id", null: false
+    t.bigint "vegetable_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["veggie_id"], name: "index_scoring_cards_on_veggie_id"
+    t.index ["vegetable_id"], name: "index_scoring_cards_on_vegetable_id"
   end
 
   create_table "scoring_conditions", force: :cascade do |t|
@@ -38,16 +38,16 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_04_001603) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "veggie_conditions", force: :cascade do |t|
+  create_table "vegetable_conditions", force: :cascade do |t|
     t.bigint "scoring_condition_id", null: false
-    t.bigint "veggie_id", null: false
+    t.bigint "vegetable_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["scoring_condition_id"], name: "index_veggie_conditions_on_scoring_condition_id"
-    t.index ["veggie_id"], name: "index_veggie_conditions_on_veggie_id"
+    t.index ["scoring_condition_id"], name: "index_vegetable_conditions_on_scoring_condition_id"
+    t.index ["vegetable_id"], name: "index_vegetable_conditions_on_vegetable_id"
   end
 
-  create_table "veggies", force: :cascade do |t|
+  create_table "vegetables", force: :cascade do |t|
     t.string "color"
     t.string "name"
     t.string "png"
@@ -57,7 +57,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_04_001603) do
 
   add_foreign_key "card_conditions", "scoring_cards"
   add_foreign_key "card_conditions", "scoring_conditions"
-  add_foreign_key "scoring_cards", "veggies"
-  add_foreign_key "veggie_conditions", "scoring_conditions"
-  add_foreign_key "veggie_conditions", "veggies"
+  add_foreign_key "scoring_cards", "vegetables"
+  add_foreign_key "vegetable_conditions", "scoring_conditions"
+  add_foreign_key "vegetable_conditions", "vegetables"
 end

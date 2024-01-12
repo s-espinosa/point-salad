@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  get '/veggies/:id', to: 'veggies#show', as: 'veggie'
+  resources :vegetables, only: [:show]
   resources :scoring_conditions, only: [:show]
   resources :scoring_cards, only: [:show]
 end

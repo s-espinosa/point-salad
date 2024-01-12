@@ -1,6 +1,6 @@
-class CreateVeggies < ActiveRecord::Migration[7.1]
+class CreateVegetables < ActiveRecord::Migration[7.1]
   def change
-    create_table :veggies do |t|
+    create_table :vegetables do |t|
       t.string :color
       t.string :name
       t.string :png
