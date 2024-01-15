@@ -1,4 +1,4 @@
-#### CREATE VEGGIES #####
+#### CREATE VEGETABLES #####
 lettuce = Vegetable.find_or_create_by(name: 'lettuce') do |vegetable|
   vegetable.color = 'green-600'
   vegetable.png = '/assets/lettuce.png'
@@ -40,10 +40,6 @@ vegetables = [
 
 #### CREATE SCORING CONDITIONS #####
 
-# sets = ScoringCondition.includes(:required_vegetables).where(scoring_method: 'set')
-
-# ScoringCondition.create(points: -1, scoring_method: 'set', required_vegetables: [cabbage])
-
 negative_one_set_of_one = vegetables.each do |vegetable|
   ScoringCondition
     .find_or_create_by(
@@ -53,154 +49,154 @@ negative_one_set_of_one = vegetables.each do |vegetable|
     )
 end
 
-# negative_two_set_of_one = veggies.each do |veggie|
-#   ScoringCondition.find_or_create_by(
-#     points: -2,
-#     scoring_method: 'set',
-#     required_veggies: [veggie]
-#   )
-# end
+negative_two_set_of_one = vegetables.each do |vegetable|
+  ScoringCondition.find_or_create_by(
+    points: -2,
+    scoring_method: 'set',
+    required_vegetables: [vegetable].to_json
+  )
+end
 
-# negative_four_set_of_one = veggies.each do |veggie|
-#   ScoringCondition.find_or_create_by(
-#     points: -4,
-#     scoring_method: 'set',
-#     required_veggies: [veggie]
-#   )
-# end
+negative_four_set_of_one = vegetables.each do |vegetable|
+  ScoringCondition.find_or_create_by(
+    points: -4,
+    scoring_method: 'set',
+    required_vegetables: [vegetable].to_json
+  )
+end
 
-# positive_one_set_of_one = veggies.each do |veggie|
-#   ScoringCondition.find_or_create_by(
-#     points: 1,
-#     scoring_method: 'set',
-#     required_veggies: [veggie]
-#   )
-# end
+positive_one_set_of_one = vegetables.each do |vegetable|
+  ScoringCondition.find_or_create_by(
+    points: 1,
+    scoring_method: 'set',
+    required_vegetables: [vegetable].to_json
+  )
+end
 
-# positive_two_set_of_one = veggies.each do |veggie|
-#   ScoringCondition.find_or_create_by(
-#     points: 2,
-#     scoring_method: 'set',
-#     required_veggies: [veggie]
-#   )
-# end
+positive_two_set_of_one = vegetables.each do |vegetable|
+  ScoringCondition.find_or_create_by(
+    points: 2,
+    scoring_method: 'set',
+    required_vegetables: [vegetable].to_json
+  )
+end
 
-# positive_three_set_of_one = veggies.each do |veggie|
-#   ScoringCondition.find_or_create_by(
-#     points: 3,
-#     scoring_method: 'set',
-#     required_veggies: [veggie]
-#   )
-# end
+positive_three_set_of_one = vegetables.each do |vegetable|
+  ScoringCondition.find_or_create_by(
+    points: 3,
+    scoring_method: 'set',
+    required_vegetables: [vegetable].to_json
+  )
+end
 
-# positive_four_set_of_one = veggies.each do |veggie|
-#   ScoringCondition.find_or_create_by(
-#     points: 4,
-#     scoring_method: 'set',
-#     required_veggies: [veggie]
-#   )
-# end
+positive_four_set_of_one = vegetables.each do |vegetable|
+  ScoringCondition.find_or_create_by(
+    points: 4,
+    scoring_method: 'set',
+    required_vegetables: [vegetable].to_json
+  )
+end
 
-# pairs = veggies.each do |veggie|
-#   ScoringCondition.find_or_create_by(
-#     points: 5,
-#     scoring_method: 'pair',
-#     required_veggies: [veggie]
-#   )
-# end
+pairs = vegetables.each do |vegetable|
+  ScoringCondition.find_or_create_by(
+    points: 5,
+    scoring_method: 'pair',
+    required_vegetables: [vegetable].to_json
+  )
+end
 
-# threes = veggies.each do |veggie|
-#   ScoringCondition.find_or_create_by(
-#     points: 8,
-#     scoring_method: 'three',
-#     required_veggies: [veggie]
-#   )
-# end
+threes = vegetables.each do |vegetable|
+  ScoringCondition.find_or_create_by(
+    points: 8,
+    scoring_method: 'three',
+    required_vegetables: [vegetable].to_json
+  )
+end
 
-# odd_total = veggies.each do |veggie|
-#   ScoringCondition.find_or_create_by(
-#     points: 3,
-#     scoring_method: 'odd_total',
-#     required_veggies: [veggie]
-#   )
-# end
+odd_total = vegetables.each do |vegetable|
+  ScoringCondition.find_or_create_by(
+    points: 3,
+    scoring_method: 'odd_total',
+    required_vegetables: [vegetable].to_json
+  )
+end
 
-# even_total = veggies.each do |veggie|
-#   ScoringCondition.find_or_create_by(
-#     points: 7,
-#     scoring_method: 'even_total',
-#     required_veggies: [veggie]
-#   )
-# end
+even_total = vegetables.each do |vegetable|
+  ScoringCondition.find_or_create_by(
+    points: 7,
+    scoring_method: 'even_total',
+    required_vegetables: [vegetable].to_json
+  )
+end
 
-# most = veggies.each do |veggie|
-#   ScoringCondition.find_or_create_by(
-#     points: 10,
-#     scoring_method: 'most',
-#     required_veggies: [veggie]
-#   )
-# end
+most = vegetables.each do |vegetable|
+  ScoringCondition.find_or_create_by(
+    points: 10,
+    scoring_method: 'most',
+    required_vegetables: [vegetable].to_json
+  )
+end
 
-# fewest = veggies.each do |veggie|
-#   ScoringCondition.find_or_create_by(
-#     points: 7,
-#     scoring_method: 'fewest',
-#     required_veggies: [veggie]
-#   )
-# end
+fewest = vegetables.each do |vegetable|
+  ScoringCondition.find_or_create_by(
+    points: 7,
+    scoring_method: 'fewest',
+    required_vegetables: [vegetable].to_json
+  )
+end
 
-# sets_of_two = [
-#   [cabbage, lettuce],
-#   [cabbage, onion],
-#   [cabbage, pepper],
-#   [cabbage, tomato],
-#   [carrot, lettuce],
-#   [carrot, onion],
-#   [carrot, pepper],
-#   [carrot, tomato],
-#   [lettuce, onion],
-#   [onion, pepper],
-#   [tomato, lettuce],
-#   [tomato, pepper],
-# ]
+sets_of_two = [
+  [:cabbage, :lettuce].to_json,
+  [:cabbage, :onion].to_json,
+  [:cabbage, :pepper].to_json,
+  [:cabbage, :tomato].to_json,
+  [:carrot, :lettuce].to_json,
+  [:carrot, :onion].to_json,
+  [:carrot, :pepper].to_json,
+  [:carrot, :tomato].to_json,
+  [:lettuce, :onion].to_json,
+  [:onion, :pepper].to_json,
+  [:tomato, :lettuce].to_json,
+  [:tomato, :pepper].to_json,
+]
 
-# sets_of_two.each do |set|
-#   ScoringCondition.find_or_create_by(
-#     points: 5,
-#     scoring_method: 'set',
-#     required_veggies: set
-#   )
-# end
+sets_of_two.each do |set|
+  ScoringCondition.find_or_create_by(
+    points: 5,
+    scoring_method: 'set',
+    required_vegetables: set
+  )
+end
 
-# sets_of_three = [
-#   [cabbage, carrot, tomato],
-#   [cabbage, tomato, lettuce],
-#   [carrot, cabbage, onion],
-#   [carrot, onion, pepper],
-#   [lettuce, carrot, onion],
-#   [lettuce, pepper, carrot],
-#   [onion, pepper, cabbage],
-#   [onion, tomato, pepper],
-#   [pepper, cabbage, tomato],
-#   [pepper, lettuce, cabbage],
-#   [tomato, lettuce, carrot],
-#   [tomato, onion, lettuce]
-# ]
+sets_of_three = [
+  [:cabbage, :carrot, :tomato].to_json,
+  [:cabbage, :tomato, :lettuce].to_json,
+  [:carrot, :cabbage, :onion].to_json,
+  [:carrot, :onion, :pepper].to_json,
+  [:lettuce, :carrot, :onion].to_json,
+  [:lettuce, :pepper, :carrot].to_json,
+  [:onion, :pepper, :cabbage].to_json,
+  [:onion, :tomato, :pepper].to_json,
+  [:pepper, :cabbage, :tomato].to_json,
+  [:pepper, :lettuce, :cabbage].to_json,
+  [:tomato, :lettuce, :carrot].to_json,
+  [:tomato, :onion, :lettuce].to_json,
+]
 
-# sets_of_three.each do |set|
-#   ScoringCondition.find_or_create_by(
-#     points: 8,
-#     scoring_method: 'set',
-#     required_veggies: set
-#   )
-# end
+sets_of_three.each do |set|
+  ScoringCondition.find_or_create_by(
+    points: 8,
+    scoring_method: 'set',
+    required_vegetables: set
+  )
+end
 
-# full_set = ScoringCondition.find_or_create_by(points: 12, scoring_method: 'set', required_veggies: veggies)
-# missing = ScoringCondition.find_or_create_by(points: 5, scoring_method: 'missing', required_veggies: veggies)
-# at_least_two = ScoringCondition.find_or_create_by(points: 3, scoring_method: 'atLeastTwo', required_veggies: veggies)
-# at_least_three = ScoringCondition.find_or_create_by(points: 5, scoring_method: 'atLeastThree', required_veggies: veggies)
-# most_total = ScoringCondition.find_or_create_by(points: 10, scoring_method: 'mostTotal', required_veggies: veggies)
-# fewest_total = ScoringCondition.find_or_create_by(points: 7, scoring_method: 'fewestTotal', required_veggies: veggies)
+full_set = ScoringCondition.find_or_create_by(points: 12, scoring_method: 'set', required_vegetables: vegetables.to_json)
+missing = ScoringCondition.find_or_create_by(points: 5, scoring_method: 'missing', required_vegetables: vegetables.to_json)
+at_least_two = ScoringCondition.find_or_create_by(points: 3, scoring_method: 'atLeastTwo', required_vegetables: vegetables.to_json)
+at_least_three = ScoringCondition.find_or_create_by(points: 5, scoring_method: 'atLeastThree', required_vegetables: vegetables.to_json)
+most_total = ScoringCondition.find_or_create_by(points: 10, scoring_method: 'mostTotal', required_vegetables: vegetables.to_json)
+fewest_total = ScoringCondition.find_or_create_by(points: 7, scoring_method: 'fewestTotal', required_vegetables: vegetables.to_json)
 
 
 #### CREATE SCORING CARDS #####
@@ -468,7 +464,7 @@ end
 # 3/odd total cabbage
 # carrot
 
-# 5/veggie type with at least 3
+# 5/vegetable type with at least 3
 # carrot
 
 # 7/fewest cabbage
@@ -505,7 +501,7 @@ end
 # 10/most lettuce
 # pepper
 
-# 10/most total veggies
+# 10/most total vegetables
 # pepper
 
 # 5/carrot and tomato
@@ -530,7 +526,7 @@ end
 # 3/odd total pepper
 # lettuce
 
-# 7/fewest total veggies
+# 7/fewest total vegetables
 # lettuce
 
 # 7/fewest pepper
@@ -561,7 +557,7 @@ end
 # 3/odd total carrot
 # cabbage
 
-# 5/missing veggie type
+# 5/missing vegetable type
 # cabbage
 
 # 7/fewest carrot
@@ -593,7 +589,7 @@ end
 # 3/odd total tomato
 # onion
 
-# 3/veggie with at least 2
+# 3/vegetable with at least 2
 # onion
 
 # 7/fewest tomato

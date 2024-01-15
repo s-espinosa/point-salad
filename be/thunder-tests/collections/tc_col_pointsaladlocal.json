@@ -1,0 +1,37 @@
+{
+    "_id": "30290570-fb9a-4973-a7f6-3f4f98dca0a7",
+    "colName": "point_salad_local",
+    "created": "2024-01-15T23:53:31.261Z",
+    "sortNum": 10000,
+    "folders": [],
+    "requests": [
+        {
+            "_id": "2ac9c95f-feb4-4103-b079-6f96d82e44e7",
+            "colId": "30290570-fb9a-4973-a7f6-3f4f98dca0a7",
+            "containerId": "",
+            "name": "Vegetables Show",
+            "url": "http://127.0.0.1:3000/vegetables/1",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-01-15T23:53:31.264Z",
+            "modified": "2024-01-15T23:53:31.264Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "963db66f-7c68-4414-800c-c62a6a0fed7a",
+            "colId": "30290570-fb9a-4973-a7f6-3f4f98dca0a7",
+            "containerId": "",
+            "name": "ScoringConditions Show",
+            "url": "http://127.0.0.1:3000/scoring_conditions/1",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-01-15T23:53:31.266Z",
+            "modified": "2024-01-15T23:53:31.266Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
