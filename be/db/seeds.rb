@@ -1,4 +1,6 @@
 #### CREATE VEGETABLES #####
+puts "Creating Vegetables"
+
 lettuce = Vegetable.find_or_create_by(name: 'lettuce') do |vegetable|
   vegetable.color = 'green-600'
   vegetable.png = '/assets/lettuce.png'
@@ -39,6 +41,7 @@ vegetables = [
 ]
 
 #### CREATE SCORING CONDITIONS #####
+puts "Creating ScoringConditions"
 
 negative_one_set_of_one = vegetables.each do |vegetable|
   ScoringCondition
