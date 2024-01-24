@@ -32,6 +32,20 @@
             "headers": [],
             "params": [],
             "tests": []
+        },
+        {
+            "_id": "c5e64088-987c-4e37-8807-c78656e136ab",
+            "colId": "30290570-fb9a-4973-a7f6-3f4f98dca0a7",
+            "containerId": "",
+            "name": "ScoringCards Show",
+            "url": "http://127.0.0.1:3000/scoring_cards/1",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-01-24T21:56:56.355Z",
+            "modified": "2024-01-24T21:57:03.277Z",
+            "headers": [],
+            "params": [],
+            "tests": []
         }
     ]
 }
