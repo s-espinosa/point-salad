@@ -9,5 +9,5 @@ Rails.application.routes.draw do
   # root "posts#index"
   resources :vegetables, only: [:show]
   resources :scoring_conditions, only: [:show]
-  resources :scoring_cards, only: [:show]
+  resources :scoring_cards, only: [:show, :index]
 end

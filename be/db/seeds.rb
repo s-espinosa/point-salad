@@ -1329,6 +1329,7 @@ ScoringCard.find_or_create_by(scoring_description: '7/fewest onions') do |card|
   card.scoring_conditions = [
     ScoringCondition.find_by(points: 7, scoring_method: 'fewest', required_vegetables: ['onion'].to_json)
   ]
+  card.soloable = false
 end
 
 # 7/fewest cabbage
@@ -1339,6 +1340,7 @@ ScoringCard.find_or_create_by(scoring_description: '7/fewest cabbage') do |card|
   card.scoring_conditions = [
     ScoringCondition.find_by(points: 7, scoring_method: 'fewest', required_vegetables: ['cabbage'].to_json)
   ]
+  card.soloable = false
 end
 
 # 7/fewest lettuce
@@ -1349,6 +1351,7 @@ ScoringCard.find_or_create_by(scoring_description: '7/fewest lettuce') do |card|
   card.scoring_conditions = [
     ScoringCondition.find_by(points: 7, scoring_method: 'fewest', required_vegetables: ['lettuce'].to_json)
   ]
+  card.soloable = false
 end
 
 # 7/fewest pepper
@@ -1359,6 +1362,7 @@ ScoringCard.find_or_create_by(scoring_description: '7/fewest pepper') do |card|
   card.scoring_conditions = [
     ScoringCondition.find_by(points: 7, scoring_method: 'fewest', required_vegetables: ['pepper'].to_json)
   ]
+  card.soloable = false
 end
 
 # 7/fewest carrot
@@ -1369,6 +1373,7 @@ ScoringCard.find_or_create_by(scoring_description: '7/fewest carrot') do |card|
   card.scoring_conditions = [
     ScoringCondition.find_by(points: 7, scoring_method: 'fewest', required_vegetables: ['carrot'].to_json)
   ]
+  card.soloable = false
 end
 
 # 7/fewest tomato
@@ -1379,6 +1384,7 @@ ScoringCard.find_or_create_by(scoring_description: '7/fewest tomato') do |card|
   card.scoring_conditions = [
     ScoringCondition.find_by(points: 7, scoring_method: 'fewest', required_vegetables: ['tomato'].to_json)
   ]
+  card.soloable = false
 end
 
 # 7/fewest total vegetables
@@ -1389,6 +1395,7 @@ ScoringCard.find_or_create_by(scoring_description: '7/fewest total vegetables') 
   card.scoring_conditions = [
     ScoringCondition.find_by(points: 7, scoring_method: 'fewestTotal', required_vegetables: ['cabbage','carrot', 'lettuce', 'onion', 'pepper', 'tomato'].to_json)
   ]
+  card.soloable = false
 end
 
 
@@ -1402,6 +1409,7 @@ ScoringCard.find_or_create_by(scoring_description: '10/most onions') do |card|
   card.scoring_conditions = [
     ScoringCondition.find_by(points: 10, scoring_method: 'most', required_vegetables: ['onion'].to_json)
   ]
+  card.soloable = false
 end
 
 # 10/most cabbage
@@ -1412,6 +1420,7 @@ ScoringCard.find_or_create_by(scoring_description: '10/most cabbage') do |card|
   card.scoring_conditions = [
     ScoringCondition.find_by(points: 10, scoring_method: 'most', required_vegetables: ['cabbage'].to_json)
   ]
+  card.soloable = false
 end
 
 # 10/most lettuce
@@ -1422,6 +1431,7 @@ ScoringCard.find_or_create_by(scoring_description: '10/most lettuce') do |card|
   card.scoring_conditions = [
     ScoringCondition.find_by(points: 10, scoring_method: 'most', required_vegetables: ['lettuce'].to_json)
   ]
+  card.soloable = false
 end
 
 # 10/most pepper
@@ -1432,6 +1442,7 @@ ScoringCard.find_or_create_by(scoring_description: '10/most pepper') do |card|
   card.scoring_conditions = [
     ScoringCondition.find_by(points: 10, scoring_method: 'most', required_vegetables: ['pepper'].to_json)
   ]
+  card.soloable = false
 end
 
 # 10/most carrot
@@ -1442,6 +1453,7 @@ ScoringCard.find_or_create_by(scoring_description: '10/most carrot') do |card|
   card.scoring_conditions = [
     ScoringCondition.find_by(points: 10, scoring_method: 'most', required_vegetables: ['carrot'].to_json)
   ]
+  card.soloable = false
 end
 
 # 10/most tomato
@@ -1452,6 +1464,7 @@ ScoringCard.find_or_create_by(scoring_description: '10/most tomato') do |card|
   card.scoring_conditions = [
     ScoringCondition.find_by(points: 10, scoring_method: 'most', required_vegetables: ['tomato'].to_json)
   ]
+  card.soloable = false
 end
 
 # 10/most total vegetables
@@ -1462,4 +1475,5 @@ ScoringCard.find_or_create_by(scoring_description: '10/most total vegetables') d
   card.scoring_conditions = [
     ScoringCondition.find_by(points: 10, scoring_method: 'mostTotal', required_vegetables: ['cabbage','carrot', 'lettuce', 'onion', 'pepper', 'tomato'].to_json)
   ]
+  card.soloable = false
 end

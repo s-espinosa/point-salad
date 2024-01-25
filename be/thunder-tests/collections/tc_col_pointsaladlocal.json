@@ -46,6 +46,40 @@
             "headers": [],
             "params": [],
             "tests": []
+        },
+        {
+            "_id": "3dc15ac5-d04a-4519-a4a4-875c8e3fb614",
+            "colId": "30290570-fb9a-4973-a7f6-3f4f98dca0a7",
+            "containerId": "",
+            "name": "ScoringCards Index",
+            "url": "http://127.0.0.1:3000/scoring_cards",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-01-25T04:32:42.765Z",
+            "modified": "2024-01-25T04:33:09.502Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "80149467-14de-4435-90f8-548bf4c2738a",
+            "colId": "30290570-fb9a-4973-a7f6-3f4f98dca0a7",
+            "containerId": "",
+            "name": "ScoringCards Index Soloable",
+            "url": "http://127.0.0.1:3000/scoring_cards?soloable=true",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2024-01-25T04:52:16.842Z",
+            "modified": "2024-01-25T04:52:39.107Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "soloable",
+                    "value": "true",
+                    "isPath": false
+                }
+            ],
+            "tests": []
         }
     ]
 }

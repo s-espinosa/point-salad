@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_03_054205) do
+ActiveRecord::Schema[7.1].define(version: 2024_01_25_043909) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -28,6 +28,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_03_054205) do
     t.bigint "vegetable_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "soloable", default: true
     t.index ["vegetable_id"], name: "index_scoring_cards_on_vegetable_id"
   end
 
