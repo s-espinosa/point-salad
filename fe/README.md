@@ -291,7 +291,7 @@ carrot
 3/odd total cabbage
 carrot
 
-5/veggie type with at least 3
+5/vegetable type with at least 3
 carrot
 
 7/fewest cabbage
@@ -328,7 +328,7 @@ pepper
 10/most lettuce
 pepper
 
-10/most total veggies
+10/most total vegetables
 pepper
 
 5/carrot and tomato
@@ -353,7 +353,7 @@ lettuce
 3/odd total pepper
 lettuce
 
-7/fewest total veggies
+7/fewest total vegetables
 lettuce
 
 7/fewest pepper
@@ -384,7 +384,7 @@ cabbage
 3/odd total carrot
 cabbage
 
-5/missing veggie type
+5/missing vegetable type
 cabbage
 
 7/fewest carrot
@@ -416,7 +416,7 @@ onion
 3/odd total tomato
 onion
 
-3/veggie with at least 2
+3/vegetable with at least 2
 onion
 
 7/fewest tomato

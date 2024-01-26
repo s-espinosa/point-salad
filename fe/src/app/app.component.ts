@@ -1,20 +1,20 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { VeggieComponent } from './veggie/veggie.component';
-import { VeggiesComponent } from './veggies/veggies.component';
-import { Veggie } from './veggie';
+import { VegetableComponent } from './vegetable/vegetable.component';
+import { VegetablesComponent } from './vegetables/vegetables.component';
+import { Vegetable } from './vegetable';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, VeggieComponent, VeggiesComponent],
+  imports: [CommonModule, RouterOutlet, VegetableComponent, VegetablesComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'point-salad';
-  veggies: Veggie[] = [
+  vegetables: Vegetable[] = [
     {
       color: 'bg-green-600',
       name: 'lettuce',
@@ -46,8 +46,8 @@ export class AppComponent {
       png: '/assets/tomato.png'
     },
   ]
-  collectedVeggies: Veggie[] = [];
-  veggieTypes = [
+  collectedVegetables: Vegetable[] = [];
+  vegetableTypes = [
       'lettuce',
       'onion',
       'cabbage',
@@ -56,16 +56,16 @@ export class AppComponent {
       'tomato',
   ]
 
-  selectVeggie(veggie: Veggie) {
-    let index = this.veggies.indexOf(veggie)
-    this.veggies.splice(index, 1)
-    this.collectedVeggies.push(veggie)
+  selectVegetable(vegetable: Vegetable) {
+    let index = this.vegetables.indexOf(vegetable)
+    this.vegetables.splice(index, 1)
+    this.collectedVegetables.push(vegetable)
   }
 
-  countCollected(veggieName: string) {
+  countCollected(vegetableName: string) {
     let count = 0;
-    this.collectedVeggies.forEach((veggie) => {
-      if(veggie.name === veggieName) {
+    this.collectedVegetables.forEach((vegetable) => {
+      if(vegetable.name === vegetableName) {
         count++
       }
     })

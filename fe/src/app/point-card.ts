@@ -1,8 +1,8 @@
 import { ScoringCondition } from "./scoring-condition";
-import { Veggie } from "./veggie";
+import { Vegetable } from "./vegetable";
 
 export interface PointCard {
   scoringDescription: string;
   scoringConditions: ScoringCondition[];
-  veggie: Veggie;
+  vegetable: Vegetable;
 }

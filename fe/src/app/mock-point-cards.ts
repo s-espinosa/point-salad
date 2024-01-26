@@ -10,7 +10,7 @@ export const POINTCARDS: PointCard[] = [
                 type: 'pointsPer'
             }
         ],
-        veggie: {
+        vegetable: {
             color: 'red-700',
             name: 'tomato',
             png: '/assets/tomato.png'
@@ -25,7 +25,7 @@ export const POINTCARDS: PointCard[] = [
                 type: 'pointsPer'
             }
         ],
-        veggie: {
+        vegetable: {
             color: 'orange-500',
             name: 'carrot',
             png: '/assets/carrot.png'
@@ -40,7 +40,7 @@ export const POINTCARDS: PointCard[] = [
                 type: 'pointsPer'
             }
         ],
-        veggie: {
+        vegetable: {
             color: 'yellow-400',
             name: 'pepper',
             png: '/assets/pepper.png'
@@ -55,7 +55,7 @@ export const POINTCARDS: PointCard[] = [
                 type: 'pointsPer'
             }
         ],
-        veggie: {
+        vegetable: {
             color: 'green-600',
             name: 'lettuce',
             png: '/assets/lettuce.png'
@@ -70,7 +70,7 @@ export const POINTCARDS: PointCard[] = [
                 type: 'pointsPer'
             }
         ],
-        veggie: {
+        vegetable: {
             color: 'fuchsia-800',
             name: 'cabbage',
             png: '/assets/cabbage.png'
@@ -85,7 +85,7 @@ export const POINTCARDS: PointCard[] = [
                 type: 'pointsPer'
             }
         ],
-        veggie: {
+        vegetable: {
             color: 'pink-700',
             name: 'onion',
             png: '/assets/onion.png'

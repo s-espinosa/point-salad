@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
 import { NgFor } from '@angular/common';
-import { Veggie } from '../veggie';
-import { VeggieComponent } from '../veggie/veggie.component';
+import { Vegetable } from '../vegetable';
+import { VegetableComponent } from '../vegetable/vegetable.component';
 
 @Component({
-  selector: 'ps-veggies',
+  selector: 'ps-vegetables',
   standalone: true,
-  imports: [NgFor, VeggieComponent],
-  templateUrl: './veggies.component.html',
-  styleUrl: './veggies.component.scss'
+  imports: [NgFor, VegetableComponent],
+  templateUrl: './vegetables.component.html',
+  styleUrl: './vegetables.component.scss'
 })
-export class VeggiesComponent {
-  veggies: Veggie[] = [
+export class VegetablesComponent {
+  vegetables: Vegetable[] = [
     {
       color: 'green-600',
       name: 'lettuce',
