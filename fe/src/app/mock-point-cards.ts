@@ -2,93 +2,93 @@ import { PointCard } from "./point-card";
 
 export const POINTCARDS: PointCard[] = [
     {
-        scoringDescription: '2/Onion',
-        scoringConditions: [
+        "scoring_description": "2/onion",
+        "scoring_conditions": [
             {
-                points: 2,
-                requiredVegetable: 'onion',
-                type: 'pointsPer'
+                "points": 2,
+                "required_vegetables": "[\"onion\"]",
+                "scoring_method": "set"
             }
         ],
-        vegetable: {
-            color: 'red-700',
-            name: 'tomato',
-            png: '/assets/tomato.png'
+        "vegetable": {
+            "color": "red-700",
+            "name": "tomato",
+            "png": "/assets/tomato.png"
         }
     },
     {
-        scoringDescription: '2/Cabbage',
-        scoringConditions: [
+        "scoring_description": "2/cabbage",
+        "scoring_conditions": [
             {
-                points: 2,
-                requiredVegetable: 'cabbage',
-                type: 'pointsPer'
+                "points": 2,
+                "required_vegetables": "[\"carrot\"]",
+                "scoring_method": "set"
             }
         ],
-        vegetable: {
-            color: 'orange-500',
-            name: 'carrot',
-            png: '/assets/carrot.png'
+        "vegetable": {
+            "color": "orange-500",
+            "name": "carrot",
+            "png": "/assets/carrot.png"
         }
     },
     {
-        scoringDescription: '2/Lettuce',
-        scoringConditions: [
+        "scoring_description": "2/lettuce",
+        "scoring_conditions": [
             {
-                points: 2,
-                requiredVegetable: 'lettuce',
-                type: 'pointsPer'
+                "points": 2,
+                "required_vegetables": "[\"lettuce\"]",
+                "scoring_method": "set"
             }
         ],
-        vegetable: {
-            color: 'yellow-400',
-            name: 'pepper',
-            png: '/assets/pepper.png'
+        "vegetable": {
+            "color": "yellow-400",
+            "name": "pepper",
+            "png": "/assets/pepper.png"
         }
     },
     {
-        scoringDescription: '2/Pepper',
-        scoringConditions: [
+        "scoring_description": "2/pepper",
+        "scoring_conditions": [
             {
-                points: 2,
-                requiredVegetable: 'pepper',
-                type: 'pointsPer'
+                "points": 2,
+                "required_vegetables": "[\"pepper\"]",
+                "scoring_method": "set"
             }
         ],
-        vegetable: {
-            color: 'green-600',
-            name: 'lettuce',
-            png: '/assets/lettuce.png'
+        "vegetable": {
+            "color": "green-600",
+            "name": "lettuce",
+            "png": "/assets/lettuce.png"
         }
     },
     {
-        scoringDescription: '2/Carrot',
-        scoringConditions: [
+        "scoring_description": "2/carrot",
+        "scoring_conditions": [
             {
-                points: 2,
-                requiredVegetable: 'carrot',
-                type: 'pointsPer'
+                "points": 2,
+                "required_vegetables": "[\"carrot\"]",
+                "scoring_method": "set"
             }
         ],
-        vegetable: {
-            color: 'fuchsia-800',
-            name: 'cabbage',
-            png: '/assets/cabbage.png'
+        "vegetable": {
+            "color": "fuchsia-800",
+            "name": "cabbage",
+            "png": "/assets/cabbage.png"
         }
     },
     {
-        scoringDescription: '2/Tomato',
-        scoringConditions: [
+        "scoring_description": "2/tomato",
+        "scoring_conditions": [
             {
-                points: 2,
-                requiredVegetable: 'tomato',
-                type: 'pointsPer'
+                "points": 2,
+                "required_vegetables": "[\"tomato\"]",
+                "scoring_method": "set"
             }
         ],
-        vegetable: {
-            color: 'pink-700',
-            name: 'onion',
-            png: '/assets/onion.png'
+        "vegetable": {
+            "color": "pink-700",
+            "name": "onion",
+            "png": "/assets/onion.png"
         }
     },
 ];

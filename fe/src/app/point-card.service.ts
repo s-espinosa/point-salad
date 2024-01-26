@@ -11,4 +11,8 @@ export class PointCardService {
   getPointCards(): PointCard[] {
     return POINTCARDS;
   }
+
+  getPointCardsFromAPI(): PointCard[] {
+    
+  }
 }

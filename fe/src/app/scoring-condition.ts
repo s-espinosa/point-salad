@@ -1,5 +1,5 @@
 export interface ScoringCondition {
     points: number;
-    requiredVegetable: string;
-    type: string;
+    required_vegetables: string;
+    scoring_method: string;
 }
