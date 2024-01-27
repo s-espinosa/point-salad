@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { VegetableComponent } from './vegetable/vegetable.component';
 import { VegetablesComponent } from './vegetables/vegetables.component';
 import { Vegetable } from './vegetable';
+import { PointCardService } from './point-card.service';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,12 @@ import { Vegetable } from './vegetable';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  constructor(private pointCardService: PointCardService){}
+  ngOnInit(): void {
+    this.pointCardService.getPointCards()
+  }
+
   title = 'point-salad';
   vegetables: Vegetable[] = [
     {
